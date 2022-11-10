@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bayes’ Theorem example</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>  
+  </head>
+
+  <body>
+    <header>
+      <h1><a href="index.html">Thomas Bayes and his Bayes’ Theorem</a></h1>
+         <nav>
+          <a href="background.html">&#9830;Background</a>
+          <a href="bayesian_and_frequentist.html">&#9830;Bayesian and Frequentist</a>
+          <a href="bayes’_theorem_example.html" id="selected">&#9830;Bayes’ Theorem example</a>
+        </nav>
+      </header>
+        
+        <div id="container">
+        <main>
+
+          <figure>
+        <img 
+        width="800" 
+        height="1007" 
+        src="breast_cancer.png"
+        srcset="breast_cancer.png 800w, breast_cancer_2x.png 1600w"
+        sizes="(max-width: 800px) 800px, (min-width: 801x) 1600px"
+        alt="breast_cancer">
+          </figure>
+
+
+        <article>
+           <h3>Real life example:</h3>
+           <p>In a study, physicians were asked what the odds of breast cancer would be in a woman who was initially thought to have a 1% risk of cancer but who ended up with a positive mammogram result (a mammogram accurately classifies about 80% of cancerous tumors and 90% of benign tumors.) 95 out of a hundred physicians estimated the probability of cancer to be about 75%. Do you agree?</p>
+
+           <p><u><strong>Introduce the events:</strong></u><p>
+           <p> + = mammogram result is positive, </p>
+           <p>B = tumor is benign, </p> 
+           <p>M = tumor is malignant.</p>
+           <p>Note that B<sup>c</sup> = M. We are given P(M) = .01, so P(B) = 1 − P(M) = .99. We are also given the conditional probabilities P(+ | M) = .80 and P(− | B) = .90, where the event − is the complement of +, thus P(+ | B) = .10.</p>
+
+           <p><u><strong>Solution:</strong></u><p>
+           <p>
+             \[P(M | +) = {P(+ | M)P(M) \over (P(+ | M)P(M) + P(+ | B)P(B))}\]
+             \[= {0.80 × 0.01 \over (0.80 × 0.01 + 0.10 × 0.99)}\]
+             \[= 0.075.\]
+           </p>
+
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

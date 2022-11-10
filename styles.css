@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; 
+}
+
+body{
+  background-color: RGB(223, 207, 190);
+}
+
+.display-none{
+  display: none;
+}
+
+#container {
+  max-width: 60em;
+  margin: auto;
+}
+
+/* text */
+h1, p, nav, h3 {
+  font-family: Quicksand, sans-serif;
+  font-weight: lighter;
+  line-height: 130%;
+}
+
+
+a:link, a:visited {
+  color: Black;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+a:active {
+  color: Sienna;
+  opacity: 0.7;
+}
+
+#selected {
+font-style: italic;
+}
+
+/* layout */
+header, nav{
+  padding: 1em;
+}
+
+header {
+  background-color: DarkSeaGreen;
+}
+
+h1 {
+  padding: 0.5em;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.3em;
+}
+
+article {
+  padding: 1em;
+  padding-bottom: 0;
+  margin-top: 1em;
+}
+
+article > p {
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 30em) {
+
+  header{
+    height: 10em;
+    position: sticky;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  nav > a {
+    margin-right: 1em;
+  }
+
+}
+
+@media (min-width: 41em){
+ header{
+    height: 7em;
+  }
+}
+
+@media (min-width: 45em) {
+
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  article {
+    padding-top: 0;
+  }
+
+}
